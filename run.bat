@@ -56,7 +56,7 @@ goto menu
 
 :process
 set /p file="Файл клипа: "
-set /p out="Куда сохранить (Enter = рядом, с суффиксом -smooth): "
+set /p out="Куда сохранить (Enter = рядом, имя + .processed.atk.json): "
 if "%out%"=="" (python autotrack.py process "%file%" --lowpass 10) else (python autotrack.py process "%file%" --lowpass 10 --out "%out%")
 pause
 goto menu
