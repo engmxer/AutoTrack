@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+build/
+dist/
+
+# Тесты
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Рабочие данные: записи маршрутов
+clips/
+*.raw.atk.json
+
+# Отчёты и телеметрия
+tele.atk.json
+*.telemetry.atk.json

@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "autotrack"
+version = "0.1.0"
+description = "Запись и воспроизведение маршрута джойстика (NBA 2K, The Track) с контролем плавности стиков"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{ name = "AutoTrack" }]
+dependencies = ["pygame-ce>=2.4"]
+
+[project.optional-dependencies]
+fast = ["numpy>=1.22"]
+windows = ["vgamepad>=0.0.8; sys_platform == 'win32'"]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+autotrack = "autotrack.cli:main"
+
+[tool.setuptools]
+packages = ["autotrack"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
